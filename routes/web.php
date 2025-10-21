@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\MatakuliahController;
 
 #Simple route
@@ -75,3 +76,8 @@ Route::post('/starting', [AuthController::class, 'login1'])->name('masuk');
 Route::post('/daftar', [AuthController::class, 'signup'])->name('daftar');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+Route::get('/pelanggan', [PelangganController::class, 'index'])->name('pelanggan.list');
+Route::get('/pelanggan/create', [PelangganController::class, 'create'])->name('pelanggan.create');
+Route::post('/pelanggan/store', [PelangganController::class, 'store'])->name('pelanggan.store');
+
