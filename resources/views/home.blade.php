@@ -79,17 +79,15 @@
             </div>
         </div>
     </nav>
-
+    @if (session('info'))
+        <div class="alert alert-info">
+            {{ session('info') }}
+        </div>
+    @endif
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
-            <h1> {{ $username }} </h1>
-            <p> {{ $my_age }} </p>
-            <p> {{ $hobby }} </p>
-            <p> {{ $tgl_harus_wisuda }} </p>
-            <p> {{ $time_to_study_left }} </p>
-            <p> {{ $current_Semester }} </p>
-            <p> {{ $future_goal }} </p>
+
         </div>
     </section>
 
@@ -227,7 +225,19 @@
                             </table>
                         </div>
                         <p class="text-muted small mb-0">Tambahkan <code>.table-striped</code> atau
-                            <code>.table-bordered</code> sesuai kebutuhan.</p>
+                            <code>.table-bordered</code> sesuai kebutuhan.
+                        </p>
+                    </div>
+                </div>
+                {{-- Buttons --}}
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="h5 mb-3">Buttons</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="{{ route('go', 'login') }}" class="btn btn-primary">Go to Login</a>
+                            <a href="{{ route('go', 'belanja') }}" class="btn btn-success">Go to E-Commerce</a>
+                            <a href="{{ route('go', 'home') }}" class="btn btn-outline-secondary">Go Home</a>
+                        </div>
                     </div>
                 </div>
             </div>

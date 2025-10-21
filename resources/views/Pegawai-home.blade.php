@@ -49,5 +49,10 @@
             <li><strong>Cita-cita:</strong> {{ $future_goal }}</li>
         </ul>
     </div>
+    <form action="auth/login" method="POST">
+    <input type="text" name="username">
+    <input type="password" name="password">
+    <button type="submit">Submit</button>
+</form>
 </body>
 </html>
